@@ -58,7 +58,7 @@ function App() {
             required
           />
           <input
-            type="text"
+            type="number"
             placeholder="Phone"
             name="myphone"
             value={phone}
