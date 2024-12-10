@@ -26,6 +26,9 @@ function App() {
       .then(() => {
         console.log("Connected successfully...");
         alert("Data submitted successfully!");
+        setFname("")
+        setLname("")
+        setPhone("")
       })
       .catch((err) => {
         console.error("Error:", err);
