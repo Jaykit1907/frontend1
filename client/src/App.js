@@ -23,12 +23,15 @@ function App() {
       },
       body: JSON.stringify(Dataobj),
     })
-      .then(() => {
+      .then((data) => {
         console.log("Connected successfully...");
         alert("Data submitted successfully!");
         setFname("")
         setLname("")
         setPhone("")
+        retunr (data.json());
+      }).then((newdata)=>{
+        alert(newdata);
       })
       .catch((err) => {
         console.error("Error:", err);
