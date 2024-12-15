@@ -5,6 +5,7 @@ function App() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [phone, setPhone] = useState("");
+  const [mailmsg,setMailmsg]=useState(true);
 
   const handleSubmit = (e) => {
     // Prevent default form behavior
@@ -25,13 +26,17 @@ function App() {
       },
       body: JSON.stringify(Dataobj),
     })
-      .then(() => {
+      .then((msg) => {
+        return msg.json();
+        
+        
+      }).then((newdata)=>{
+        console.log(newdata);
         console.log("Connected successfully...");
         alert("Data submitted successfully!");
         setFname("")
         setLname("")
         setPhone("")
-        
       })
       .catch((err) => {
         console.error("Error:", err);
@@ -76,6 +81,12 @@ function App() {
           <button type="submit">Submit</button>
         </form>
       </section>
+{ mailmsg &&
+      <section className="mailmsg">
+        <h1>data send successfully</h1>
+      </section>
+
+}
     </>
   );
 }
