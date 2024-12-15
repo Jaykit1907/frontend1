@@ -16,6 +16,8 @@ function App() {
       phone: phone,
     };
 
+    try{
+
     fetch("https://backend-five-inky.vercel.app/insert", {
       method: "POST",
       headers: {
@@ -23,20 +25,23 @@ function App() {
       },
       body: JSON.stringify(Dataobj),
     })
-      .then((data) => {
+      .then(() => {
         console.log("Connected successfully...");
         alert("Data submitted successfully!");
         setFname("")
         setLname("")
         setPhone("")
-        retunr (data.json());
-      }).then((newdata)=>{
-        alert(newdata);
+        
       })
       .catch((err) => {
         console.error("Error:", err);
         alert("Failed to submit data.");
       });
+    }
+    catch(err){
+      console.log(err);
+    }
+    
   };
 
   return (
