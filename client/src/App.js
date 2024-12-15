@@ -28,8 +28,7 @@ function App() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(Dataobj),
-    })
-      .then((msg) => {
+    }).then((msg) => {
         return msg.json();
         
         
@@ -44,10 +43,7 @@ function App() {
         setTimeout(()=>{setMailmsg(false)},5000);
 
       })
-      .catch((err) => {
-        console.error("Error:", err);
-        alert("Failed to submit data.");
-      });
+     
     }
     catch(err){
       console.log(err);
