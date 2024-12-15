@@ -7,6 +7,9 @@ function App() {
   const [phone, setPhone] = useState("");
   const [mailmsg,setMailmsg]=useState(false);
 
+
+
+
   const handleSubmit = (e) => {
     // Prevent default form behavior
     e.preventDefault();
@@ -37,6 +40,9 @@ function App() {
         setFname("")
         setLname("")
         setPhone("")
+        setMailmsg(true);
+        setTimeout(()=>setMailmsg(fasle),5000);
+
       })
       .catch((err) => {
         console.error("Error:", err);
