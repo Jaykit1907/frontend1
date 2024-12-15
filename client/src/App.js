@@ -18,7 +18,7 @@ function App() {
 
     try{
 
-    fetch("https://backend-five-inky.vercel.app/insert", {
+    fetch("https://frontend1-one-drab.vercel.app/insert", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
