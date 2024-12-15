@@ -5,7 +5,7 @@ function App() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [phone, setPhone] = useState("");
-  const [mailmsg,setMailmsg]=useState(true);
+  const [mailmsg,setMailmsg]=useState(false);
 
   const handleSubmit = (e) => {
     // Prevent default form behavior
