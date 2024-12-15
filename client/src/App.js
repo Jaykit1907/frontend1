@@ -41,7 +41,7 @@ function App() {
         setLname("")
         setPhone("")
         setMailmsg(true);
-        setTimeout(()=>setMailmsg(fasle),5000);
+        setTimeout(()=>{setMailmsg(false)},5000);
 
       })
       .catch((err) => {
